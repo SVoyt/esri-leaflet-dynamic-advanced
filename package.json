@@ -1,0 +1,15 @@
+{
+  "name": "esri-leaflet-dynamic-advanced",
+  "version": "0.0.1",
+  "description": "Advanced DynamicMapLayer for EsriLeaflet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "esri",
+    "dynamicmaplayer"
+  ],
+  "author": "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)",
+  "license": "Apache-2.0"
+}
