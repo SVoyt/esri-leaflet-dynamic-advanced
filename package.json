@@ -2,13 +2,15 @@
   "name": "esri-leaflet-dynamic-advanced",
   "version": "0.0.1",
   "description": "Advanced DynamicMapLayer for EsriLeaflet",
-  "main": "index.js",
+  "main": "dist/esri-leaflet-dynamic-advanced.min.js",
   "scripts": {
     "test": "karma start"
   },
   "keywords": [
     "esri",
-    "dynamicmaplayer"
+    "dynamicmaplayer",
+    "dateline",
+    "z-index"
   ],
   "author": "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)",
   "license": "Apache-2.0",
@@ -24,6 +26,10 @@
     "mocha": "^2.4.5",
     "phantomjs-prebuilt": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SVoyt/esri-leaflet-dynamic-advanced.git"
+  }
   "dependencies": {
     "esri-leaflet": "^2.0.0-beta.7",
     "leaflet": "^1.0.0-beta.2"

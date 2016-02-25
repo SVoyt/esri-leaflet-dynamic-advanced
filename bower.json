@@ -1,11 +1,11 @@
 {
   "name": "esri-leaflet-dynamic-advanced",
+  "version": "0.0.1",
   "authors": [
     "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)"
   ],
   "description": "Advanced DynamicMapLayer for EsriLeaflet",
-  "main": "",
-  "moduleType": [],
+  "main": "dist/esri-leaflet-dynamic-advanced.min.js",
   "keywords": [
     "esri",
     "dynamicmaplayer"
@@ -16,8 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "spec",
+    "src"
   ],
   "dependencies": {
     "leaflet": "1.0.0-beta.2",
