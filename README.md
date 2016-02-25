@@ -9,5 +9,5 @@ This is plugin for [esri-leaflet](https://github.com/Esri/esri-leaflet). Dynamic
 
 ### How to install
 ```
-bower install esri-leafet-dynamic-advanced
+bower install esri-leaflet-dynamic-advanced
 ```
