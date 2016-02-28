@@ -5,8 +5,11 @@ Icon
 .Spotlight-V100
 
 # Node
-node_modules
+node_modules/
 npm-debug.log
 
 # Bower
-bower_components
+bower_components/
+
+# IDEs
+.idea/
