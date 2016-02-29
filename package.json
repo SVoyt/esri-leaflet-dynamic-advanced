@@ -14,8 +14,7 @@
     "z-index"
   ],
   "authors": [
-    "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)",
-    "Alex Semenov <skarppi@mail.ru>"
+    "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)"
   ],
   "license": "Apache-2.0",
   "devDependencies": {
