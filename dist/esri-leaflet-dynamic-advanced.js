@@ -465,7 +465,7 @@ L.esri.DynamicMapLayerAdvanced = L.Layer.extend({
       var normXMin = newXmin;
       var normXMax = newXmax;
 
-      if ((newXmin < -180) | (newXmax > 180)) {
+      if ((newXmin < -180) || (newXmax > 180)) {
         var d2 = Math.floor((newXmin + 180) / 360);
         normXMin -= d2 * 360;
         normXMax -= d2 * 360;
