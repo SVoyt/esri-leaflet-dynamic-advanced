@@ -2,7 +2,8 @@
   "name": "esri-leaflet-dynamic-advanced",
   "version": "0.0.1",
   "authors": [
-    "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)"
+    "Sergey Voyteshonok <sergeyvoyteshonok@ya.ru> (http://svoyt.com)",
+    "Alex Semenov <skarppi@mail.ru>"
   ],
   "description": "Advanced DynamicMapLayer for EsriLeaflet",
   "main": "dist/esri-leaflet-dynamic-advanced.min.js",
