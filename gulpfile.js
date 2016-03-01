@@ -32,7 +32,7 @@ var del = require('del');
  *  Build tasks
  */
 gulp.task('default', ['clean'], function() {
-  gulp.start('test and build');
+  gulp.start('build');
 });
 
 gulp.task('clean', function() {
@@ -52,7 +52,7 @@ gulp.task('build', function() {
 /**
  *  Test tasks
  */
-gulp.task('test and build', ['build'], function(done) {
+gulp.task('test', function(done) {
   new karma.Server({
     configFile: path.join(__dirname, '/karma.conf.js')
   }, function(failCount) {
