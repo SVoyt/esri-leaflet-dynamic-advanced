@@ -23,13 +23,14 @@
   <script>
 
     var map = L.map('map').setView([0, 180], 2);
-    
+
     L.esri.basemapLayer('Gray').addTo(map);
 
     L.esri.dynamicMapLayerAdvanced({
       url: 'http://services.arcgisonline.com/arcgis/rest/services/World_Shaded_Relief/MapServer',
       opacity: 1,
-      f:'json'
+      zIndex: 3,
+      f:'image'
     }).addTo(map);
 
   </script>
