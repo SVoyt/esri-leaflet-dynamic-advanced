@@ -1,6 +1,6 @@
 {
   "name": "esri-leaflet-dynamic-advanced",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Advanced DynamicMapLayer for EsriLeaflet",
   "main": "dist/esri-leaflet-dynamic-advanced.min.js",
   "scripts": {
