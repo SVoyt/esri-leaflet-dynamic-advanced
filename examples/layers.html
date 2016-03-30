@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Simple DynamicMapLayer</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css" />
+  <script src="../bower_components/leaflet/dist/leaflet.js"></script>
+
+  <script src="../bower_components/esri-leaflet/dist/esri-leaflet.js"></script>
+
+  <script src="../dist/esri-leaflet-dynamic-advanced.js"></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; } 
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <script>
+
+    // Sample with z-index of layer.
+    // On each update layer order is permanent.
+    // Third layer will be added last, but it will be between first and second, beacuse of z-Index
+
+    var map = L.map('map').setView([0, 180], 2);
+
+    var base = { "ESRI Gray": L.esri.basemapLayer('Gray').addTo(map) };
+
+    var first = L.esri.dynamicMapLayerAdvanced({
+      url: 'http://services.arcgisonline.com/arcgis/rest/services/World_Shaded_Relief/MapServer',
+      opacity: 0.7,
+      zIndex: 1,
+      f:'image'
+    });
+
+    var second = L.esri.dynamicMapLayerAdvanced({
+      url: 'http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer',
+      opacity: 0.7,
+      zIndex: 3,
+      f:'image'
+    });
+
+    var third = L.esri.dynamicMapLayerAdvanced({
+      url: 'http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer',
+      opacity: 0.7,
+      zIndex: 2,
+      f:'image'
+    });
+
+    var overlays = {
+        "Relief": first,
+        "Streets": second,
+        "Imagery": third
+    };
+
+    L.control.layers(base, overlays,{ autoZIndex:false }).addTo(map);
+  
+  </script>
+</body>
+</html>

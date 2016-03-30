@@ -455,7 +455,7 @@ L.esri.DynamicMapLayerAdvanced = L.Layer.extend({
     var i = 0;
 
     var d = (newXmin + 180) / 360;
-    var sign = Math.sign(d);
+    var sign = this._sign(d);
     sign = (sign === 0) ? 1 : sign;
     var coef = sign * Math.floor(Math.abs(d));
 
@@ -556,6 +556,20 @@ L.esri.DynamicMapLayerAdvanced = L.Layer.extend({
       for(var i = 0; i < this._singleImages.length; i++) {
         f.call(this, this._singleImages[i]);
       }
+    }
+  },
+
+  // because some browsers doesn't support Math.sign
+  // issue https://github.com/SVoyt/esri-leaflet-dynamic-advanced/issues/5
+  _sign:function(value){
+    if (value>0){
+      return 1;
+    }
+    else if (value<0){
+      return -1;
+    }
+    else{
+      return 0;
     }
   }
 
