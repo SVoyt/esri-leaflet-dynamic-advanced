@@ -301,6 +301,19 @@ L.esri.DynamicMapLayerAdvanced = L.Layer.extend({
     return img;
   },
 
+  _imageFailed: function(params){
+    this.fire('error', {
+      params:params
+    });
+
+    if(params.requestCount !== this._requestCounter.count) {
+      delete params.image;
+      return;
+    }
+
+    this._requestCounter.loadedImages++;
+  },
+
   _imageLoaded: function(params) {
     if(params.requestCount !== this._requestCounter.count) {
       delete params.image;
@@ -437,7 +450,9 @@ L.esri.DynamicMapLayerAdvanced = L.Layer.extend({
   _renderImage: function(params) {
     var img = this._initImage();
     img.position = params.position;
-    img.onload = L.bind(this._imageLoaded, this, {image: img, mapParams: params, requestCount: params.requestCount});
+    var imageParams = {image: img, mapParams: params, requestCount: params.requestCount};
+    img.onload = L.bind(this._imageLoaded, this, imageParams);
+    img.onerror = L.bind(this._imageFailed, this, imageParams);
     img.src = params.href;
   },
 
